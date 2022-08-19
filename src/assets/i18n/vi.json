@@ -1,0 +1,57 @@
+{
+    "Messages": {
+        "SystemError": "Có lỗi xảy ra, vui lòng liên hệ quản trị viên.",
+        "AddNewSuccess": "Thêm mới thành công.",
+        "UpdateSuccess": "Cập nhật thành công.",
+        "DeleteSuccess": "Xóa bản ghi thành công.",
+        "404": "Không tồn tại, vui lòng kiểm tra lại.",
+        "403": "Không có quyền thực hiện, vui lòng kiểm tra lại."
+    },
+    "Labels": {
+        "Create": "Tạo mới",
+        "Update": "Cập nhật",
+        "Save": "Lưu",
+        "Delete": "Xóa"
+    },
+    "Modules": {
+        "Menu": {
+            "Dashboard": {
+                "Title": "Tổng quan",
+                "Teacher": "Giáo viên",
+                "Manager": "Quản lý"
+            },
+            "Class": {
+                "Title": "Lớp học",
+                "ClassList": "Danh sách lớp học"
+            },
+            "Teacher": {
+                "Title": "Giáo viên",
+                "TeacherList": "Danh sách giáo viên"
+            },
+            "Student": {
+                "Title": "Học viên",
+                "VisitorList": "Danh sách visitor",
+                "StudentList": "Danh sách học viên"
+            },
+            "Setting": {
+                "Title": "Cài đặt",
+                "Salary": "Bậc lương",
+                "Skill": "Kỹ năng"
+            }
+        }
+    },
+    "ErrorMessages": {
+
+    },
+    "KendoUI": {
+        "Calendar": {
+            "Today": "Hôm nay",
+            "AllDay": "Cả ngày",
+            "DayViewTitle": "Ngày",
+            "WeekViewTitle": "Tuần",
+            "MonthViewTitle": "Tháng",
+            "ShowWorkDay": "Thời gian làm việc",
+            "ShowFullDay": "Thời gian cả ngày"
+        }
+    }
+}

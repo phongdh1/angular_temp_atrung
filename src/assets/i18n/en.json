@@ -1,0 +1,57 @@
+{
+    "Messages":{
+        "SystemError": "Sorry, something went wrong. Please contact administrator.",
+        "AddNewSuccess": "Add new successfully.",
+        "UpdateSuccess": "Update successfully.",
+        "DeleteSuccess": "Delete successfully.",
+        "404": "Not found, please check again.",
+        "403": "You don't have permission, please check again."
+     },
+     "Labels": {
+        "Create" : "Tạo mới",
+        "Update" : "Cập nhật",
+        "Save" : "Lưu",
+        "Delete": "Xóa"
+     },
+    "Modules": {
+        "Menu": {
+            "Dashboard": {
+                "Title": "Dashboard",
+                "Teacher": "Teacher",
+                "Manager": "Manager"
+            },
+            "Class": {
+                "Title": "Class",
+                "ClassList": "Classes"
+            },
+            "Teacher": {
+                "Title": "Teacher",
+                "TeacherList": "Teachers"
+            },
+            "Student": {
+                "Title": "Student",
+                "VisitorList": "Visitors",
+                "StudentList": "Students"
+            },
+            "Setting": {
+                "Title": "Setting",
+                "Salary": "Salary",
+                "Skill": "Skill"
+            }
+        }
+    },
+    "ErrorMessages": {
+
+    },
+    "KendoUI": {
+        "Calendar": {
+            "Today": "Today",
+            "AllDay": "all day",
+            "DayViewTitle": "Day",
+            "WeekViewTitle": "Week",
+            "MonthViewTitle": "Month",
+            "ShowWorkDay": "Show business hours",
+            "ShowFullDay": "Show full day"
+        }
+    }
+}
