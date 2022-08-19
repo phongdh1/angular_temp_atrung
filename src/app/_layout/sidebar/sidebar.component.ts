@@ -9,10 +9,12 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 export class SidebarComponent implements OnInit {
 
   @Input() isCollapsed = false;
- 
+  visible = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
 
 }

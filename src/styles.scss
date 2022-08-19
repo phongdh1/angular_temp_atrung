@@ -1,10 +1,73 @@
 /* You can add global styles to this file, and also import other style files */
 body {
     font-weight: 500;
-    .pull-left{
+    .pull-left {
         float: left;
     }
-    .pull-right{
+    .pull-right {
         float: right;
     }
+
+    .main-header {
+        .reponsive-menu {
+            display: none;
+        }        
+    }
+
+    .drawer-menu {
+        .ant-drawer-wrapper-body {
+            background-color: #303b70;
+        }
+    }
+    
+    @media only screen and (max-device-width: 480px) {
+        /* styles for mobile browsers smaller than 480px; (iPhone) */
+        .main-header {
+            .first-menu {
+                display: none;
+            }
+            .menu-sidebar {
+                display: none;
+            }
+            .reponsive-menu {
+                display: inline;
+            }
+            .logo-menu {
+                background: #4a547d;
+                img {
+                    max-height: 50px;
+                    margin: 1rem;
+                }
+                button {
+                    float: right;
+                    margin: 1rem;
+                }
+            }
+        }
+    }
+    // @media only screen and (min-device-width: 500px) {
+    //   /* styles for mobile browsers smaller than 480px; (iPhone) */
+    //   .main-header {
+    //       .first-menu {
+    //           display: inline-block;
+    //       }
+    //       .second-menu {
+    //           display: none;
+    //       }
+    //       .reponsive-menu {
+    //           display: none;
+    //       }
+    //       .logo-menu {
+    //           background: white;
+    //           img {
+    //               max-height: 50px;
+    //               margin: 1rem;
+    //           }
+    //           button {
+    //               float: right;
+    //               margin: 1rem;
+    //           }
+    //       }
+    //   }
+    // }
 }

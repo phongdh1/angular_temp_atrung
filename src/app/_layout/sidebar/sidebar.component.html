@@ -1,48 +1,52 @@
-<ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-  <li nz-submenu nzOpen nzTitle="{{ 'Modules.Menu.Dashboard.Title' | translate }}" nzIcon="dashboard">
-    <ul>
-      <li nz-menu-item nzMatchRouter>
-        <a [routerLink]="['dashboard/manager']">{{ 'Modules.Menu.Dashboard.Manager' | translate }}</a>
-      </li>
-      <li nz-menu-item nzMatchRouter>
-        <a [routerLink]="['dashboard/teacher']">{{ 'Modules.Menu.Dashboard.Teacher' | translate }}</a>
-      </li>
-    </ul>
-  </li>
-  <li nz-submenu nzTitle="{{ 'Modules.Menu.Teacher.Title' | translate }}" nzIcon="form">
-    <ul>
-      <li nz-menu-item nzMatchRouter>
-        <a>{{ 'Modules.Menu.Teacher.TeacherList' | translate }}</a>
-      </li>
-    </ul>
-  </li>
-  <li nz-submenu nzTitle="{{ 'Modules.Menu.Class.Title' | translate }}" nzIcon="form">
-    <ul>
-      <li nz-menu-item nzMatchRouter>
-        <a>{{ 'Modules.Menu.Class.ClassList' | translate }}</a>
-      </li>
-    </ul>
-  </li>
-  <li nz-submenu nzTitle="{{ 'Modules.Menu.Student.Title' | translate }}" nzIcon="form">
-    <ul>
-      <li nz-menu-item nzMatchRouter>
-        <a>{{ 'Modules.Menu.Student.VisitorList' | translate }}</a>
-      </li>
+<div lass="main-header">
 
-      <li nz-menu-item nzMatchRouter>
-        <a>{{ 'Modules.Menu.Student.StudentList' | translate }}</a>
-      </li>
-    </ul>
-  </li>
-  <li nz-submenu nzTitle="{{ 'Modules.Menu.Setting.Title' | translate }}" nzIcon="form">
-    <ul>
-      <li nz-menu-item nzMatchRouter>
-        <a>{{ 'Modules.Menu.Setting.Salary' | translate }}</a>
-      </li>
+    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+        <li nz-submenu nzOpen nzTitle="{{ 'Modules.Menu.Dashboard.Title' | translate }}" nzIcon="dashboard">
+            <ul>
+                <li nz-menu-item nzMatchRouter>
+                    <a [routerLink]="['dashboard/manager']">{{ 'Modules.Menu.Dashboard.Manager' | translate }}</a>
+                </li>
+                <li nz-menu-item nzMatchRouter>
+                    <a [routerLink]="['dashboard/teacher']">{{ 'Modules.Menu.Dashboard.Teacher' | translate }}</a>
+                </li>
+            </ul>
+        </li>
+        <li nz-submenu nzTitle="{{ 'Modules.Menu.Teacher.Title' | translate }}" nzIcon="form">
+            <ul>
+                <li nz-menu-item nzMatchRouter>
+                    <a>{{ 'Modules.Menu.Teacher.TeacherList' | translate }}</a>
+                </li>
+            </ul>
+        </li>
+        <li nz-submenu nzTitle="{{ 'Modules.Menu.Class.Title' | translate }}" nzIcon="form">
+            <ul>
+                <li nz-menu-item nzMatchRouter>
+                    <a>{{ 'Modules.Menu.Class.ClassList' | translate }}</a>
+                </li>
+            </ul>
+        </li>
+        <li nz-submenu nzTitle="{{ 'Modules.Menu.Student.Title' | translate }}" nzIcon="form">
+            <ul>
+                <li nz-menu-item nzMatchRouter>
+                    <a>{{ 'Modules.Menu.Student.VisitorList' | translate }}</a>
+                </li>
 
-      <li nz-menu-item nzMatchRouter>
-        <a>{{ 'Modules.Menu.Setting.Skill' | translate }}</a>
-      </li>
+                <li nz-menu-item nzMatchRouter>
+                    <a>{{ 'Modules.Menu.Student.StudentList' | translate }}</a>
+                </li>
+            </ul>
+        </li>
+        <li nz-submenu nzTitle="{{ 'Modules.Menu.Setting.Title' | translate }}" nzIcon="form">
+            <ul>
+                <li nz-menu-item nzMatchRouter>
+                    <a>{{ 'Modules.Menu.Setting.Salary' | translate }}</a>
+                </li>
+
+                <li nz-menu-item nzMatchRouter>
+                    <a>{{ 'Modules.Menu.Setting.Skill' | translate }}</a>
+                </li>
+            </ul>
+        </li>
     </ul>
-  </li>
-</ul>
+
+</div>

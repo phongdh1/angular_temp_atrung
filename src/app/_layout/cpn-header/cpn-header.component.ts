@@ -13,6 +13,8 @@ export class CpnHeaderComponent implements OnInit {
   @Input() isCollapsed = false;
   @Output() changeMenu = new EventEmitter<any>();
 
+  visible = false;
+
   public dataLang = [
     {
       name: 'Việt Nam',
@@ -49,9 +51,21 @@ export class CpnHeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  swichMenu(){
+  switchMenu(){
     this.isCollapsed = !this.isCollapsed;
     this.changeMenu.emit(this.isCollapsed);
   }
 
+  open(): void {
+    this.visible = true;
+  }
+
+  close(): void {
+    this.visible = false;
+  }
+  chooseItem($event: any): void{    
+    if($event.target.tagName === 'A'){
+      this.close();
+    }
+  }
 }
