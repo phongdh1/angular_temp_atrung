@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 body {
     font-weight: 500;
+    .pull-left{
+        float: left;
+    }
+    .pull-right{
+        float: right;
+    }
 }

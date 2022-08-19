@@ -85,10 +85,6 @@ export class Constants {
     }
   }
 
-  
-
-  
-
   public static Permission = {
     Function: {
       DashboardAdmin: "DASHBOARD_ADMIN",
@@ -121,4 +117,6 @@ export class Constants {
     Delay3s: 3000,
     Delay5s: 5000
   }
+
+  public static Language = ['vi','en']
 }

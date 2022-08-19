@@ -1,3 +1,4 @@
+import { Constants } from './../../_share/constants/constants';
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -11,11 +12,12 @@ export class MainComponent implements OnInit {
   isCollapsed = false;
  
   
+  
   constructor(
     public translate: TranslateService
   ) {
-    translate.addLangs(['vi', 'en']);
-    translate.setDefaultLang('vi');
+    translate.addLangs(Constants.Language);
+    translate.setDefaultLang(Constants.Language[0]);
   }
 
   switchLang(lang: string) {
@@ -26,4 +28,7 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changeMenu($event:any){
+    this.isCollapsed = $event;
+  }
 }

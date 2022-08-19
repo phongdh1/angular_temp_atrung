@@ -1,0 +1,103 @@
+<nz-header>
+    <div class="app-header" nz-row>
+        <div class="pull-left" nz-col nzSpan="12">
+            <span class="header-trigger" (click)="swichMenu()">
+          <i class="trigger"
+            nz-icon
+            [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
+      </span>
+        </div>
+        <!-- 
+    <ul nz-menu nzMode="horizontal" nzTheme="light" class="menu auto-width-layout px-0 d-flex-wrap first-menu">
+     
+      <li nz-menu-item class="ml-auto">
+          <i nz-icon nzType="mail"></i> Hộp thư
+      </li>
+    </ul> -->
+        <div nz-col nzSpan="12">
+            <div nz-row nzJustify="end">
+              <div nz-col nzSpan="6">
+                <div nz-row>
+                  <div nz-col nzSpan="4">
+                    <img  style="max-width: 30px;" src={{lIconSelected}}>
+                  </div>
+  
+                  <div nz-col nzSpan="18">
+                    <nz-select [(ngModel)]="selectedLang" (ngModelChange)="switchLang($event)" >
+                      <nz-option  *ngFor="let item of dataLang" nzLabel={{item.name}} nzValue={{item.code}}>
+                        <img src="{{item.icon}}">
+                        {{item.name}}
+                      </nz-option>                 
+                    </nz-select>
+                  </div>
+                  
+                </div>
+              </div>
+             
+                <!-- Lang -->
+             
+            <!-- END -->
+
+            <!-- Notification -->
+            <div nz-col nzSpan="2">
+             
+                <div>
+                  <a nz-dropdown [nzDropdownMenu]="menu1">
+                    <div id="notification" class="notification show-count" data-count="1"></div>
+                </a>
+                <nz-dropdown-menu #menu1="nzDropdownMenu">
+                    <ul nz-menu nzSelectable>
+                        <li nz-menu-item>1st menu item</li>
+                        <li nz-menu-item>2nd menu item</li>
+                        <li nz-menu-item>3rd menu item</li>
+                        <li nz-menu-item nzDanger>4th danger item</li>
+                    </ul>
+                </nz-dropdown-menu>
+                </div>
+                
+            </div>
+            <!-- END -->
+
+            <!-- Icon2 -->
+            <div nz-col nzSpan="1">
+                <a nz-dropdown [nzDropdownMenu]="menu">
+                    <i nz-icon nzType="shopping-cart" nzTheme="outline"></i>
+                </a>
+                <nz-dropdown-menu #menu="nzDropdownMenu">
+                    <ul nz-menu nzSelectable>
+                        <li nz-menu-item>1st menu item</li>
+                        <li nz-menu-item>2nd menu item</li>
+                        <li nz-menu-item>3rd menu item</li>
+                        <li nz-menu-item nzDanger>4th danger item</li>
+                    </ul>
+                </nz-dropdown-menu>
+            </div>
+            <!-- END -->
+
+            <!-- Avatar -->
+            <div nz-col nzSpan="4">
+                <div nz-row nzJustify="end">
+                    <div nz-col nzSpan="18">
+                        <span class="pull-right">John Doe</span>
+                    </div>
+                    <div nz-col nzSpan="6">
+                        <a nz-dropdown [nzDropdownMenu]="menu">
+                            <i nz-icon nzType="user" nzTheme="outline"></i>
+                        </a>
+                        <nz-dropdown-menu #menu="nzDropdownMenu">
+                            <ul nz-menu nzSelectable>
+                                <li nz-menu-item>1st menu item</li>
+                                <li nz-menu-item>2nd menu item</li>
+                                <li nz-menu-item>3rd menu item</li>
+                                <li nz-menu-item nzDanger>4th danger item</li>
+                            </ul>
+                        </nz-dropdown-menu>
+                    </div>
+                </div>
+            </div>
+            <!-- END -->
+          </div>
+        </div>
+    </div>
+
+</nz-header>

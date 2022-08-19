@@ -16,6 +16,7 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SchedulerModule } from '@progress/kendo-angular-scheduler';
+import { NgZorroAntdModule } from 'src/app/_share/ng-zorro-ant.module';
 
 
 registerLocaleData(vi);
@@ -35,9 +36,6 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     HttpClientModule,
     BrowserAnimationsModule,
     IconsProviderModule,
-    NzLayoutModule,
-    NzMenuModule,
-
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

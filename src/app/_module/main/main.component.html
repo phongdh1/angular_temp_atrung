@@ -14,9 +14,9 @@
       </div>
       
     <!-- LEFT MENU -->
-    <!-- <aio-sidebar></aio-sidebar> -->
+    <aio-sidebar [isCollapsed]="isCollapsed"></aio-sidebar>
 
-    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+    <!-- <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
       <li nz-submenu nzOpen nzTitle="{{ 'Modules.Menu.Dashboard.Title' | translate }}" nzIcon="dashboard">
         <ul>
           <li nz-menu-item nzMatchRouter>
@@ -64,48 +64,13 @@
         </ul>
       </li>
     </ul>
-    
+     -->
     <!-- END LEFT MENU -->
 
     </nz-sider>
 
     <nz-layout>
-      <nz-header>
-        <div class="app-header">
-          <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
-              <i class="trigger"
-                 nz-icon
-                 [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
-              ></i>
-          </span>
-<!-- 
-          <ul nz-menu nzMode="horizontal" nzTheme="light" class="menu auto-width-layout px-0 d-flex-wrap first-menu">
-           
-            <li nz-menu-item class="ml-auto">
-                <i nz-icon nzType="mail"></i> Hộp thư
-            </li>
-          </ul> -->
-
-          <span class="form-inline"><img src="../../../assets/images/flags/US.svg">
-            <select 
-                class="form-control" 
-                #selectedLang 
-                (change)="switchLang(selectedLang.value)">
-              <option
-                [value]="'vi'"
-                [selected]="'vi' === translate.currentLang">
-                <i class=""></i>Việt Nam
-              </option>
-              <option
-                [value]="'en'"
-                [selected]="'en' === translate.currentLang">
-                <img src="../../../assets/images/flags/US.svg"> English
-              </option>
-            </select>
-          </span>
-  
-        </div>
-      </nz-header>
+      <app-cpn-header [isCollapsed]="isCollapsed" (changeMenu)="changeMenu($event)"></app-cpn-header>
       <nz-content>
         <div class="inner-content">
           <router-outlet></router-outlet>

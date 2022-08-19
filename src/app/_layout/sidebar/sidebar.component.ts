@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'aio-sidebar',
@@ -8,8 +8,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  isCollapsed = false;
-  
+  @Input() isCollapsed = false;
+ 
   constructor() { }
 
   ngOnInit(): void {
