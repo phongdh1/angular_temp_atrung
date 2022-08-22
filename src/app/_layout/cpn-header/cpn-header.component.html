@@ -1,6 +1,6 @@
 <nz-header>
     <div class="app-header first-menu" nz-row>
-        <div class="pull-left" nz-col nzSpan="12">
+        <div class="pull-left" nz-col nzSm="12" nzMd="4" nzLg="12" nzXl="14">
             <span class="header-trigger" (click)="switchMenu()">
           <i class="trigger"
             nz-icon
@@ -14,75 +14,54 @@
           <i nz-icon nzType="mail"></i> Hộp thư
       </li>
     </ul> -->
-        <div nz-col nzSpan="12">
-            <div nz-row nzJustify="end">
-              <div nz-col nzSpan="5">
-                <div nz-row nzJustify="end">
-                  <div nz-col nzSpan="4">
-                    <img  style="max-width: 30px;" src={{lIconSelected}}>
-                  </div>
-  
-                  <div nz-col nzSpan="16">
-                    <nz-select [(ngModel)]="selectedLang" (ngModelChange)="switchLang($event)" >
-                      <nz-option  *ngFor="let item of dataLang" nzLabel={{item.name}} nzValue={{item.code}}>
-                        <img src="{{item.icon}}">
-                        {{item.name}}
-                      </nz-option>                 
-                    </nz-select>
-                  </div>
-                  
-                </div>
-              </div>
-             
-                <!-- Lang -->
-             
-            <!-- END -->
+        <div nz-col nzSm="12" nzMd="20" nzLg="12" nzXl="10" >
+            <div nz-row nzText="Responsive" nzJustify="end">
+                <div nz-col nzSm="4" nzMd="6" nzLg="8" nzXl="4">
+                    <div nz-row nzJustify="center">
+                        <div nz-col nzSpan="4">
+                            <img style="max-width: 30px;" src={{lIconSelected}}>
+                        </div>
 
-            <!-- Notification -->
-            <div nz-col nzSpan="2">
-             
-                <div>
-                  <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu1">
-                    <div id="notification" class="notification show-count" data-count="1"></div>
-                </a>
-                <nz-dropdown-menu #menu1="nzDropdownMenu">
-                    <ul nz-menu nzSelectable>
-                        <li nz-menu-item>1st menu item</li>
-                        <li nz-menu-item>2nd menu item</li>
-                        <li nz-menu-item>3rd menu item</li>
-                        <li nz-menu-item nzDanger>4th danger item</li>
-                    </ul>
-                </nz-dropdown-menu>
-                </div>
-                
-            </div>
-            <!-- END -->
+                        <div nz-col nzSpan="16">
+                            <nz-select [(ngModel)]="selectedLang" (ngModelChange)="switchLang($event)" nzBorderless  [nzShowArrow]="false">
+                                <nz-option nzCustomContent="" *ngFor="let item of dataLang" nzLabel={{item.name}} nzValue={{item.code}}>
+                                    <img src="{{item.icon}}" style="width: 20px;" /> {{item.title}}
+                                </nz-option>
+                            </nz-select>
+                        </div>
 
-            <!-- Icon2 -->
-            <div nz-col nzSpan="1">
-                <a nz-dropdown [nzDropdownMenu]="menu">
-                    <i nz-icon nzType="shopping-cart" nzTheme="outline"></i>
-                </a>
-                <nz-dropdown-menu #menu="nzDropdownMenu">
-                    <ul nz-menu nzSelectable>
-                        <li nz-menu-item>1st menu item</li>
-                        <li nz-menu-item>2nd menu item</li>
-                        <li nz-menu-item>3rd menu item</li>
-                        <li nz-menu-item nzDanger>4th danger item</li>
-                    </ul>
-                </nz-dropdown-menu>
-            </div>
-            <!-- END -->
-
-            <!-- Avatar -->
-            <div nz-col nzSpan="4">
-                <div nz-row nzJustify="end">
-                    <div nz-col nzSpan="18">
-                        <span class="pull-right">John Doe</span>
                     </div>
-                    <div nz-col nzSpan="6">
+                </div>
+
+                <!-- Lang -->
+
+                <!-- END -->
+
+                <!-- Notification -->
+                <div nz-col  nzSm="2" nzMd="2" nzLg="3" nzXl="2">
+
+                    <div>
+                        <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu1">
+                            <div id="notification" class="notification show-count" data-count="1"></div>
+                        </a>
+                        <nz-dropdown-menu #menu1="nzDropdownMenu">
+                            <ul nz-menu nzSelectable>
+                                <li nz-menu-item>1st menu item</li>
+                                <li nz-menu-item>2nd menu item</li>
+                                <li nz-menu-item>3rd menu item</li>
+                                <li nz-menu-item nzDanger>4th danger item</li>
+                            </ul>
+                        </nz-dropdown-menu>
+                    </div>
+
+                </div>
+                <!-- END -->
+
+                <!-- Icon2 -->
+                <div nz-col  nzSm="2" nzMd="2" nzLg="3" nzXl="2">
+                    <div nz-row nzJustify="center">
                         <a nz-dropdown [nzDropdownMenu]="menu">
-                            <i nz-icon nzType="user" nzTheme="outline"></i>
+                            <i nz-icon nzType="shopping-cart" nzTheme="outline"></i>
                         </a>
                         <nz-dropdown-menu #menu="nzDropdownMenu">
                             <ul nz-menu nzSelectable>
@@ -93,75 +72,120 @@
                             </ul>
                         </nz-dropdown-menu>
                     </div>
+                  
                 </div>
+                <!-- END -->
+
+                <!-- Avatar -->
+                <div nz-col nzSm="2" nzMd="8" nzLg="8" nzXl="6">
+                    <div nz-row nzSm="12" nzMd="12" nzLg="12" nzXl="36"  nzJustify="center">
+                         <!-- <div nz-col nzSm="2" nzMd="4" nzLg="4" nzXl="8">
+                            
+                        </div>
+                        <div nz-col nzSm="2" nzMd="4" nzLg="4" nzXl="36" style="text-align: center;"> -->
+                        
+                            <a nz-dropdown [nzDropdownMenu]="menu2">
+                                <span style="padding-right: 0.5rem;">John Doe </span>
+                                <span class="avatar ng-star-inserted">                                  
+                                  <img alt="avatar" height="40" width="40" class="round" src="https://pixinvent.com/demo/vuexy-angular-admin-dashboard-template/demo-4/assets/images/portrait/small/avatar-s-11.jpg" />   
+                                </span>
+                            </a>
+                            <nz-dropdown-menu #menu2="nzDropdownMenu">
+                                <ul nz-menu nzSelectable>
+                                    <li nz-menu-item>1st menu item</li>
+                                    <li nz-menu-item>2nd menu item</li>
+                                    <li nz-menu-item>3rd menu item</li>
+                                    <li nz-menu-item nzDanger>4th danger item</li>
+                                </ul>
+                            </nz-dropdown-menu>
+                           
+                        <!-- </div> -->
+                    </div>
+                </div>
+
+                <!-- <div nz-col nzSm="8" nzMd="4" nzLg="4" nzXl="16">
+                   
+                            <a nz-dropdown [nzDropdownMenu]="menu2">
+                                <span class="avatar ng-star-inserted">
+                                  <img alt="avatar" height="40" width="40" class="round" src="https://pixinvent.com/demo/vuexy-angular-admin-dashboard-template/demo-4/assets/images/portrait/small/avatar-s-11.jpg" />   
+                                </span>
+                            </a>
+                            <nz-dropdown-menu #menu2="nzDropdownMenu">
+                                <ul nz-menu nzSelectable>
+                                    <li nz-menu-item>1st menu item</li>
+                                    <li nz-menu-item>2nd menu item</li>
+                                    <li nz-menu-item>3rd menu item</li>
+                                    <li nz-menu-item nzDanger>4th danger item</li>
+                                </ul>
+                            </nz-dropdown-menu>                      
+                </div> -->
+                <!-- END -->
             </div>
-            <!-- END -->
-          </div>
         </div>
     </div>
 
-        <!-- Menu responsive -->
-        <div class="reponsive-menu">
-          <div class="col-12 logo-menu">
-              <img src="../../../assets/images/logo-only.png" style="max-height: 50px;" />
-              <img class="text" src="./assets/images/text-only.png" alt="logo">
-              <button nz-button nzType="primary" (click)="open()"><i nz-icon nzType="menu" nzTheme="outline"></i></button>
-          </div>
-  
-          <nz-drawer [nzClosable]="true" nzWrapClassName="drawer-menu" [nzCloseOnNavigation]="true" [nzVisible]="visible" nzPlacement="left" nzTitle="Menu" (nzOnClose)="close()">
-              <ng-container *nzDrawerContent >
-  
-                  <ul nz-menu nzTheme="dark" nzMode="inline" (click)="chooseItem($event)">
-                      <li nz-submenu nzOpen nzTitle="{{ 'Modules.Menu.Dashboard.Title' | translate }}" nzIcon="dashboard">
-                          <ul>
-                              <li nz-menu-item >
-                                  <a [routerLink]="['dashboard/manager']">{{ 'Modules.Menu.Dashboard.Manager' | translate }}</a>
-                              </li>
-                              <li nz-menu-item >
-                                  <a [routerLink]="['dashboard/teacher']">{{ 'Modules.Menu.Dashboard.Teacher' | translate }}</a>
-                              </li>
-                          </ul>
-                      </li>
-                      <li nz-submenu nzTitle="{{ 'Modules.Menu.Teacher.Title' | translate }}" nzIcon="form">
-                          <ul>
-                              <li nz-menu-item>
-                                  <a>{{ 'Modules.Menu.Teacher.TeacherList' | translate }}</a>
-                              </li>
-                          </ul>
-                      </li>
-                      <li nz-submenu nzTitle="{{ 'Modules.Menu.Class.Title' | translate }}" nzIcon="form">
-                          <ul>
-                              <li nz-menu-item >
-                                  <a>{{ 'Modules.Menu.Class.ClassList' | translate }}</a>
-                              </li>
-                          </ul>
-                      </li>
-                      <li nz-submenu nzTitle="{{ 'Modules.Menu.Student.Title' | translate }}" nzIcon="form">
-                          <ul>
-                              <li nz-menu-item >
-                                  <a>{{ 'Modules.Menu.Student.VisitorList' | translate }}</a>
-                              </li>
-  
-                              <li nz-menu-item >
-                                  <a>{{ 'Modules.Menu.Student.StudentList' | translate }}</a>
-                              </li>
-                          </ul>
-                      </li>
-                      <li nz-submenu nzTitle="{{ 'Modules.Menu.Setting.Title' | translate }}" nzIcon="form">
-                          <ul>
-                              <li nz-menu-item >
-                                  <a>{{ 'Modules.Menu.Setting.Salary' | translate }}</a>
-                              </li>
-  
-                              <li nz-menu-item >
-                                  <a>{{ 'Modules.Menu.Setting.Skill' | translate }}</a>
-                              </li>
-                          </ul>
-                      </li>
-                  </ul>
-  
-              </ng-container>
-          </nz-drawer>
+    <!-- Menu responsive -->
+    <div class="reponsive-menu">
+        <div class="col-12 logo-menu">
+            <img src="../../../assets/images/logo-only.png" style="max-height: 50px;" />
+            <img class="text" src="./assets/images/text-only.png" alt="logo">
+            <button nz-button nzType="primary" (click)="open()"><i nz-icon nzType="menu" nzTheme="outline"></i></button>
         </div>
-  
+
+        <nz-drawer [nzClosable]="true" nzWrapClassName="drawer-menu" [nzCloseOnNavigation]="true" [nzVisible]="visible" nzPlacement="left" nzTitle="Menu" (nzOnClose)="close()">
+            <ng-container *nzDrawerContent>
+
+                <ul nz-menu nzTheme="dark" nzMode="inline" (click)="chooseItem($event)">
+                    <li nz-submenu nzOpen nzTitle="{{ 'Modules.Menu.Dashboard.Title' | translate }}" nzIcon="dashboard">
+                        <ul>
+                            <li nz-menu-item>
+                                <a [routerLink]="['dashboard/manager']">{{ 'Modules.Menu.Dashboard.Manager' | translate }}</a>
+                            </li>
+                            <li nz-menu-item>
+                                <a [routerLink]="['dashboard/teacher']">{{ 'Modules.Menu.Dashboard.Teacher' | translate }}</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li nz-submenu nzTitle="{{ 'Modules.Menu.Teacher.Title' | translate }}" nzIcon="form">
+                        <ul>
+                            <li nz-menu-item>
+                                <a>{{ 'Modules.Menu.Teacher.TeacherList' | translate }}</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li nz-submenu nzTitle="{{ 'Modules.Menu.Class.Title' | translate }}" nzIcon="form">
+                        <ul>
+                            <li nz-menu-item>
+                                <a>{{ 'Modules.Menu.Class.ClassList' | translate }}</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li nz-submenu nzTitle="{{ 'Modules.Menu.Student.Title' | translate }}" nzIcon="form">
+                        <ul>
+                            <li nz-menu-item>
+                                <a>{{ 'Modules.Menu.Student.VisitorList' | translate }}</a>
+                            </li>
+
+                            <li nz-menu-item>
+                                <a>{{ 'Modules.Menu.Student.StudentList' | translate }}</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li nz-submenu nzTitle="{{ 'Modules.Menu.Setting.Title' | translate }}" nzIcon="form">
+                        <ul>
+                            <li nz-menu-item>
+                                <a>{{ 'Modules.Menu.Setting.Salary' | translate }}</a>
+                            </li>
+
+                            <li nz-menu-item>
+                                <a>{{ 'Modules.Menu.Setting.Skill' | translate }}</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </ng-container>
+        </nz-drawer>
+    </div>
+
 </nz-header>

@@ -18,11 +18,13 @@ export class CpnHeaderComponent implements OnInit {
   public dataLang = [
     {
       name: 'Việt Nam',
+      title: 'VN',      
       code: 'vi',
       icon:'https://img.icons8.com/color/48/000000/vietnam.png'
     },
     {
       name: 'English',
+      title: 'EN',
       code: 'en',
       icon:'../../../assets/images/flags/US.svg'
     },
@@ -42,7 +44,7 @@ export class CpnHeaderComponent implements OnInit {
     translate.setDefaultLang(defaultLag);
   }
 
-  switchLang(langCode: any) {    
+  switchLang(langCode: any) {       
     const chooseLag = _.find(this.dataLang, { 'code': langCode });
     this.lIconSelected = chooseLag?.icon || '';
     localStorage.setItem('lang', langCode);    

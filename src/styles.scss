@@ -19,6 +19,11 @@ body {
             background-color: #303b70;
         }
     }
+    .avatar {
+        img{
+            border-radius: 50%;
+        }
+    }
     
     @media only screen and (max-device-width: 480px) {
         /* styles for mobile browsers smaller than 480px; (iPhone) */
@@ -45,29 +50,6 @@ body {
             }
         }
     }
-    // @media only screen and (min-device-width: 500px) {
-    //   /* styles for mobile browsers smaller than 480px; (iPhone) */
-    //   .main-header {
-    //       .first-menu {
-    //           display: inline-block;
-    //       }
-    //       .second-menu {
-    //           display: none;
-    //       }
-    //       .reponsive-menu {
-    //           display: none;
-    //       }
-    //       .logo-menu {
-    //           background: white;
-    //           img {
-    //               max-height: 50px;
-    //               margin: 1rem;
-    //           }
-    //           button {
-    //               float: right;
-    //               margin: 1rem;
-    //           }
-    //       }
-    //   }
-    // }
+
+    
 }

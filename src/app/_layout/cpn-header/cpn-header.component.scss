@@ -1,75 +1,97 @@
 nz-header {
-    padding: 0;
-    width: 100%;
-    z-index: 2;
+  padding: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.app-header {
+  position: relative;
+  height: 64px;
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  nz-select {
+    width: 113px;
+    .ant-select-selector {
+      border: 0px !important;
+    }
   }
-  
-  .app-header {
+
+  @keyframes bell {
+    0% {
+      transform: rotate(35deg);
+    }
+    12.5% {
+      transform: rotate(-30deg);
+    }
+    25% {
+      transform: rotate(25deg);
+    }
+    37.5% {
+      transform: rotate(-20deg);
+    }
+    50% {
+      transform: rotate(15deg);
+    }
+    62.5% {
+      transform: rotate(-10deg);
+    }
+    75% {
+      transform: rotate(5deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+
+  .notification {
+    width: 50px;
+    height: inherit;
+    color: #1890ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    height: 64px;
-    padding: 0;
-    background: #fff;
-    box-shadow: 0 1px 4px rgba(0,21,41,.08);
-    nz-select {
-        max-width: 120px;
-      }
-
-      @keyframes bell {
-        0% {transform: rotate(35deg);}
-        12.5% {transform: rotate(-30deg);}
-        25% {transform: rotate(25deg);}
-        37.5% {transform: rotate(-20deg);}
-        50% {transform: rotate(15deg);}
-        62.5% {transform: rotate(-10deg)}
-        75% {transform: rotate(5deg)}
-        100% {transform: rotate(0);}  
-      }
-
-      .notification {
-        width: 50px;
-        height: inherit;
-        color: #1890ff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        &::after {
-          min-width: 20px;
-          height: 20px;
-          content: attr(data-count);
-          background-color: #ed657d;
-          font-family: monospace;
-          font-weight: bolt;
-          font-size: 14px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 50%;
-          position: absolute;
-          top: 5px;
-          right: 5px;
-          transition: .3s;
-          opacity: 0;
-          transform: scale(.5);
-          will-change: opacity, transform;
-          color: white;
-        }
-        &::before {
-          content: "\f0f3";
-          font-family: "FontAwesome";
-          display: block;
-        }
-      }
-      .notification.show-count {
-        &::after {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-      .notification.notify {
-        &::before {
-          animation: bell 1s ease-out;
-          transform-origin: center top;
-        }
-      }        
+    &::after {
+      min-width: 20px;
+      height: 20px;
+      content: attr(data-count);
+      background-color: #ed657d;
+      font-family: monospace;
+      font-weight: bolt;
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      transition: 0.3s;
+      opacity: 0;
+      transform: scale(0.5);
+      will-change: opacity, transform;
+      color: white;
+    }
+    &::before {
+      content: "\f0f3";
+      font-family: "FontAwesome";
+      display: block;
+    }
   }
+  .notification.show-count {
+    &::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .notification.notify {
+    &::before {
+      animation: bell 1s ease-out;
+      transform-origin: center top;
+    }
+  }
+  .ant-select-selector {
+    border: 0px !important;
+  }
+}
